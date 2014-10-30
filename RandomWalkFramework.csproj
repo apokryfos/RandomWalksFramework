@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBEBFCD2-288B-49C2-ADA0-4F95173F8754}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RandomWalkFramework</RootNamespace>
+    <AssemblyName>RandomWalkFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RandomWalksDeployment.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\RandomWalkCumulativeLogger.cs" />
+    <Compile Include="Analysis\RandomWalkLogger.cs" />
+    <Compile Include="Analysis\RandomWalkLoggers.cs" />
+    <Compile Include="Analysis\RandomWalkObserver.cs" />
+    <Compile Include="Analysis\RandomWalkObservers.cs" />
+    <Compile Include="DataStructures\BinaryHeap.cs" />
+    <Compile Include="DataStructures\BinaryQueue.cs" />
+    <Compile Include="DataStructures\ComparerFromComparisson.cs" />
+    <Compile Include="DataStructures\EqualityComparerFromDelegate.cs" />
+    <Compile Include="DataStructures\FibonacciHeap.cs" />
+    <Compile Include="DataStructures\FragmentedDictionary.cs" />
+    <Compile Include="DataStructures\GenericOrderedDictionary.cs" />
+    <Compile Include="DataStructures\HashCollection.cs" />
+    <Compile Include="DataStructures\IPriorityQueue.cs" />
+    <Compile Include="DataStructures\IQueue.cs" />
+    <Compile Include="DataStructures\KeyValuePairComparer.cs" />
+    <Compile Include="DataStructures\ListMergeSort.cs" />
+    <Compile Include="DataStructures\ListRadixSort.cs" />
+    <Compile Include="DataStructures\ListShuffling.cs" />
+    <Compile Include="DataStructures\Triangle.cs" />
+    <Compile Include="DataStructures\VeryLargeList.cs" />
+    <Compile Include="GeneralRandomWalk.cs" />
+    <Compile Include="GraphFramework\AdjacencyGraph.cs" />
+    <Compile Include="GraphFramework\Algorithms\AllPairsShortestPath.cs" />
+    <Compile Include="GraphFramework\Algorithms\ClusteringCoefficient.cs" />
+    <Compile Include="GraphFramework\Algorithms\CommunityDetection.cs" />
+    <Compile Include="GraphFramework\Algorithms\ComponentConductance.cs" />
+    <Compile Include="GraphFramework\Algorithms\ConnectedComponents\ConnectedComponentsAlgorithm.cs" />
+    <Compile Include="GraphFramework\Algorithms\ConnectedComponents\StronglyConnectedComponentAlgorithm.cs" />
+    <Compile Include="GraphFramework\Algorithms\Framework\AlgorithmBase.cs" />
+    <Compile Include="GraphFramework\Algorithms\Framework\IAlgorithm.cs" />
+    <Compile Include="GraphFramework\Algorithms\Framework\IConnectedComponentAlgorithm.cs" />
+    <Compile Include="GraphFramework\Algorithms\Framework\RootedAlgorithmBase.cs" />
+    <Compile Include="GraphFramework\Algorithms\Framework\RootedSearchAlgorithmBase.cs" />
+    <Compile Include="GraphFramework\Algorithms\NormalizedConductunceCommunities.cs" />
+    <Compile Include="GraphFramework\Algorithms\QCommunityDetection.cs" />
+    <Compile Include="GraphFramework\Algorithms\Search\DepthFirstSearchAlgorithm.cs" />
+    <Compile Include="GraphFramework\Algorithms\Search\DijkstraPaths.cs" />
+    <Compile Include="GraphFramework\Algorithms\TriangleCache.cs" />
+    <Compile Include="GraphFramework\Algorithms\TriangleCounting.cs" />
+    <Compile Include="GraphFramework\Algorithms\TriangleEnumerator.cs" />
+    <Compile Include="GraphFramework\BidirectionalGraph.cs" />
+    <Compile Include="GraphFramework\Containers\AdjacencyList.cs" />
+    <Compile Include="GraphFramework\Containers\HashSetAdjacencyList.cs" />
+    <Compile Include="GraphFramework\Containers\ListEdgeList.cs" />
+    <Compile Include="GraphFramework\Containers\WeightedAdjacencyList.cs" />
+    <Compile Include="GraphFramework\Edge.cs" />
+    <Compile Include="GraphFramework\EdgeListUndirectedGraph.cs" />
+    <Compile Include="GraphFramework\Extensions\EdgeEnumeration.cs" />
+    <Compile Include="GraphFramework\Extensions\EdgeExtensions.cs" />
+    <Compile Include="GraphFramework\Extensions\GraphExtensions.cs" />
+    <Compile Include="GraphFramework\Interfaces\IAdjacencyGraph.cs" />
+    <Compile Include="GraphFramework\Interfaces\IAdjacencyList.cs" />
+    <Compile Include="GraphFramework\Interfaces\IBidirectionalGraph.cs" />
+    <Compile Include="GraphFramework\Interfaces\IEdgeList.cs" />
+    <Compile Include="GraphFramework\Interfaces\IGraph.cs" />
+    <Compile Include="GraphFramework\Interfaces\IUndirectedGraph.cs" />
+    <Compile Include="GraphFramework\Interfaces\IVertexAndEdgeSet.cs" />
+    <Compile Include="GraphFramework\Interfaces\IVertexSet.cs" />
+    <Compile Include="GraphFramework\Interfaces\IWeightedGraph.cs" />
+    <Compile Include="GraphFramework\Serializers\BinaryStream.cs" />
+    <Compile Include="GraphFramework\Serializers\GenericGraphReaderBase.cs" />
+    <Compile Include="GraphFramework\Serializers\GenericGraphStreamsFactory.cs" />
+    <Compile Include="GraphFramework\Serializers\GenericGraphWriterBase.cs" />
+    <Compile Include="GraphFramework\Serializers\GraphStreams.cs" />
+    <Compile Include="GraphFramework\Serializers\IGraphStream.cs" />
+    <Compile Include="GraphFramework\Serializers\TextGraphReader.cs" />
+    <Compile Include="GraphFramework\Serializers\TextGraphWriters.cs" />
+    <Compile Include="GraphFramework\Serializers\WeightedGraphBinaryReader.cs" />
+    <Compile Include="GraphFramework\Serializers\WeigtedGraphLineParser.cs" />
+    <Compile Include="GraphFramework\SymmetricToUndirectedAdapter.cs" />
+    <Compile Include="GraphFramework\UndirectedGraph.cs" />
+    <Compile Include="GraphFramework\WeightedGraphContainer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Querier\GeneralWeightedQuerier.cs" />
+    <Compile Include="Querier\MetropolisQuerier.cs" />
+    <Compile Include="Querier\UnweightedQueriers.cs" />
+    <Compile Include="Querier\WeightedQuerierBuffers.cs" />
+    <Compile Include="RandomWalkInterface\IGraphQuerier.cs" />
+    <Compile Include="RandomWalkInterface\IRandomWalk.cs" />
+    <Compile Include="LazyRandomWalk.cs" />
+    <Compile Include="RNG\MerseneTwister.cs" />
+    <Compile Include="MetropolisRandomWalk.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RNG\ThreadSafeRandom.cs" />
+    <Compile Include="Threading\MultiSampler.cs" />
+    <Compile Include="Threading\Sampler.cs" />
+    <Compile Include="Threading\SamplingThread.cs" />
+    <Compile Include="Threading\TerminationConditions.cs" />
+    <Compile Include="TicToc.cs" />
+    <Compile Include="Weights\CFRPFunctions.cs" />
+    <Compile Include="Weights\WeightedRandomWalks.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
